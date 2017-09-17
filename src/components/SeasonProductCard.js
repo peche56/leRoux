@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const SeasonProductCard = () => {
 
-const Div = styled.div`
+const Section = styled.div`
   margin: 10px;
   font-family: 'Raleway', sans-serif;
   width: 200px;
@@ -13,9 +13,9 @@ const Div = styled.div`
   box-shadow: 3px 2px 2px #888888;
 `;
 
-const Img = styled.div`
-overflow: hidden;
-
+const Div = styled.div`
+height: 150px;
+background-image: url(${pourpier});
 `;
 
 const Button = styled.div`
@@ -33,14 +33,16 @@ cursor: pointer;
 `;
 
   return(
-    <Div>
-   <Img src={pourpier} alt="pourpier"  />
+    <Section>
+      <Div>
+      </Div>
+
       <div>
         <h3>pourpier</h3>
         <p>description blablabla</p>
           <Button>more</Button>
       </div>
-    </Div>
+    </Section>
   )
 }
 export default SeasonProductCard;
