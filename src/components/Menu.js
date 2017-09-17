@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 
 class Menu extends Component {
 
@@ -8,15 +9,45 @@ toggleMenu = () => {
   this.setState({toggleMenu: !this.state.toggleMenu});
 }
 
+
 render(){
+  const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width 250px;
+  `;
+
+  const Button = styled.div`
+
+    width: 80px;
+    background-color: gold;
+    color: black;
+    margin: 20px auto;
+    padding: 20px;
+    transition: 0.2s ease 0.2s;
+    cursor: pointer;
+    &:hover {
+      background-color: yellow;
+      color: #bada55;
+    }
+  `;
+
+  const Section = styled.div`
+  background-color: purple;
+  `;
+
   return(
-    <div>
-      <button
+    <Div>
+      <Button
         onClick={this.toggleMenu}>
         Menu
-      </button>
+      </Button>
       {this.state.toggleMenu &&
-      <div>
+      <Section>
         <h2>Menu</h2>
         <ul>
           <li>Accueil</li>
@@ -25,9 +56,9 @@ render(){
           <li>Conseilles</li>
           <li>Contact</li>
       </ul>
-      </div>
+    </Section>
     }
-    </div>
+  </Div>
   )}
 }
 export default Menu;

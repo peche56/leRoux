@@ -1,0 +1,55 @@
+.first {
+	position: absolute;
+	-webkit-transition: all 0.2s ease-out;
+}
+
+.first.active {
+	margin-top: 10px;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: all 0.2s ease-out;
+	-webkit-transition-delay: .4s;
+}
+
+.second {
+	margin-top: 10px;
+	position: absolute;
+	-webkit-transition: all 0.2s ease-out;
+}
+
+.second.active {
+	opacity: 0;
+	margin-top: 10px;
+	-webkit-transition: all 0.2s ease-out;
+	-webkit-transition-delay: .4s;
+}
+
+.third {
+	margin-top: 20px;
+	position: absolute;
+	-webkit-transition: all 0.2s ease-out;
+}
+
+.third.active {
+	margin-top: 10px;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transition: all 0.2s ease-out;
+	-webkit-transition-delay: .4s;
+}
