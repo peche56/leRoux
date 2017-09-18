@@ -3,26 +3,29 @@ import styled from 'styled-components';
 
 class Menu extends Component {
 
-state = { toggleMenu: false}
-toggleMenu = () => {
-  console.log(this.state);
-  this.setState({toggleMenu: !this.state.toggleMenu});
+state = { menuWidth: 0}
+openMenu = () => {
+  this.setState({menuWidth: 250});
+}
+closeMenu = () => {
+  this.setState({menuWidth: 0});
 }
 
-
 render(){
-  const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+  // const Div = styled.div`
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-content: center;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   width: ${this.state.menuWidth}px;
+  // `;
+
+  const Button = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width 250px;
-  `;
-
-  const Button = styled.div`
-
     width: 80px;
     background-color: gold;
     color: black;
@@ -37,17 +40,31 @@ render(){
   `;
 
   const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: purple;
-  `;
+  width: ${this.state.menuWidth}px;
+  height: 100vh;
+  overflow-x: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.25s;
+      `;
 
   return(
-    <Div>
+    <div>
       <Button
-        onClick={this.toggleMenu}>
+        onClick={this.openMenu}>
         Menu
       </Button>
-      {this.state.toggleMenu &&
       <Section>
+        <button
+          onClick={this.closeMenu}>
+          X
+        </button>
         <h2>Menu</h2>
         <ul>
           <li>Accueil</li>
@@ -57,8 +74,8 @@ render(){
           <li>Contact</li>
       </ul>
     </Section>
-    }
-  </Div>
+
+  </div>
   )}
 }
 export default Menu;
