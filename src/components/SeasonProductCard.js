@@ -7,7 +7,6 @@ const SeasonProductCard = () => {
 
 const Section = styled.div`
   margin: 10px;
-  padding: 10px;
   font-family: 'Raleway', sans-serif;
   width: 300px;
   border: solid 1px grey;
