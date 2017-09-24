@@ -12,7 +12,7 @@ const Section = styled.div`
   width: 300px;
   border: solid 1px grey;
   border-radius: 5px;
-  box-shadow: 3px 2px 2px #888888;
+  box-shadow: 3px 2px 2px #55362c;
 `;
 
 const Div = styled.div`
@@ -21,15 +21,15 @@ background-image: url(${pourpier});
 `;
 
 const Button = styled.div`
-color: #888888;
+color: #55362c;
 margin: 10px auto;
-border: solid 1px #888888;
+border: solid 1px #55362c;
 border-radius: 2px;
 width: 80px;
 transition: 0.2s ease 0.2s;
 cursor: pointer;
 &:hover {
-  box-shadow: 2px 1px 1px #888888;
+  box-shadow: 2px 1px 1px #55362c;
   transform: rotate(5deg);
 }
 `;
