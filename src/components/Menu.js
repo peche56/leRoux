@@ -4,7 +4,11 @@ import '../App.css';
 
 class Menu extends Component {
 
-state = { menuWidth: 0}
+state = { menuWidth: 0,
+          menuList: ['Accueil', 'Nos produits', 'Suggestions du moment', 'Conseilles', 'Contact'
+          ]
+        }
+
 openMenu = () => {
   this.setState({menuWidth: 250});
 }
@@ -88,6 +92,7 @@ text-align: left;
 display: block;
   `;
 
+
   return(
     <div>
       <Button
@@ -103,11 +108,9 @@ display: block;
         </Close>
       </MenuHeader>
         <MenuList>
-          <MenuItem>Accueil</MenuItem>
-          <MenuItem>Nos produits</MenuItem>
-          <MenuItem>Suggestions du moment</MenuItem>
-          <MenuItem>Conseilles</MenuItem>
-          <MenuItem>Contact</MenuItem>
+          {this.state.menuList.map(
+            (item, i) => <MenuItem key={ i }>{item}</MenuItem>
+          )}
       </MenuList>
     </Section>
 
