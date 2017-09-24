@@ -1,9 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {createStore} from 'redux';
-import {connectRouter, routerMiddleware} from 'connected-react-router';
-import { createDevTools } from 'redux-devtools';
-import Dispatcher from 'redux-devtools-dispatch';
+// import {connectRouter, routerMiddleware} from 'connected-react-router';
+//import { createDevTools } from 'redux-devtools';
+//import Dispatcher from 'redux-devtools-dispatch';
 // import {provider} from 'react-redux';
 import './index.css';
 import App from './components/App';

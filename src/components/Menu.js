@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import '../App.css';
 
 class Menu extends Component {
 
@@ -27,6 +28,20 @@ render(){
     top: 0;
     right: 0;
     width: 80px;
+    background-color: transparent;
+    color: #55362c;
+    margin: 20px auto;
+    padding: 20px;
+    transition: 0.3s ease 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: #FFF1C4;
+    }
+  `;
+
+  const Close = styled.div`
+
+    width: 80px;
     background-color: gold;
     color: black;
     margin: 20px auto;
@@ -35,7 +50,7 @@ render(){
     cursor: pointer;
     &:hover {
       background-color: yellow;
-      color: #bada55;
+      color: #000;
     }
   `;
 
@@ -61,10 +76,10 @@ render(){
         Menu
       </Button>
       <Section>
-        <button
+        <Close
           onClick={this.closeMenu}>
           X
-        </button>
+        </Close>
         <h2>Menu</h2>
         <ul>
           <li>Accueil</li>

@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import pourpier from '../img/pourpier.jpg';
 import flowers from '../datas/flowers';
 import styled from 'styled-components';
+import '../App.css';
 
 const SeasonProductCard = () => {
 
 const Section = styled.div`
+  font-family: 'Roboto', sans-serif;
   margin: 10px;
-  font-family: 'Raleway', sans-serif;
   width: 300px;
   border: solid 1px grey;
   border-radius: 5px;
