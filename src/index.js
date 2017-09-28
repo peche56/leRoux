@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {createStore} from 'redux';
+import { BrowserRouter, Match, Miss } from 'react-router-dom';
 // import {connectRouter, routerMiddleware} from 'connected-react-router';
 //import { createDevTools } from 'redux-devtools';
 //import Dispatcher from 'redux-devtools-dispatch';
@@ -13,7 +14,9 @@ const store = createStore(
 );
 
 render(
+  <BrowserRouter>
   <provider store={store}>
     <App />
-  </provider>,
+  </provider>
+</BrowserRouter>,
   document.getElementById('root'));

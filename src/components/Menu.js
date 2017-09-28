@@ -6,27 +6,24 @@ class Menu extends Component {
 
 state = { menuWidth: 0,
           menuList: ['Accueil', 'Nos produits', 'Suggestions du moment', 'Conseilles', 'Contact'
-          ]
+        ],
         }
-
 openMenu = () => {
   this.setState({menuWidth: 250});
 }
 closeMenu = () => {
   this.setState({menuWidth: 0});
 }
-
 render(){
-
   const Button = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;
-    background-color: transparent;
-    color: #55362c;
-    margin: 20px auto;
+    width: 50px;
+    font-size: 20px;
+    color: #6EBA0B;
     padding: 20px;
+    background-color: #55362c;
     transition: 0.3s ease 0.2s;
     cursor: pointer;
     &:hover {
@@ -45,13 +42,13 @@ render(){
 
 const MenuTiltle = styled.div`
   text-align: center;
+  font-size: 20px;
   margin-top: 20px;
   padding-right: 50px;
   color: #FFF1C4;
 `;
 
   const Close = styled.div`
-
     width: 50px;
     background-color: gold;
     color: #FF985D;
@@ -59,9 +56,9 @@ const MenuTiltle = styled.div`
     padding: 20px;
     transition: 0.2s ease 0.2s;
     cursor: pointer;
-    &:hover {
-      background-color: yellow;
-      color: #000;
+      &:hover {
+        background-color: yellow;
+        color: #000;
     }
   `;
 
@@ -87,12 +84,14 @@ const MenuTiltle = styled.div`
   `;
 
   const MenuItem = styled.li`
-padding: 10px 0 10px 40px;
+padding: 20px 0 20px 40px;
 text-align: left;
 display: block;
   `;
 
-
+  const Separator = styled.div`
+border-top: 1px solid #55362c;
+  `;
   return(
     <div>
       <Button
@@ -109,12 +108,19 @@ display: block;
       </MenuHeader>
         <MenuList>
           {this.state.menuList.map(
-            (item, i) => <MenuItem key={ i }>{item}</MenuItem>
+            (item, i) =>
+            <div>
+              <MenuItem
+                key={ i }><a>{item}</a>
+              </MenuItem>
+                <Separator></Separator>
+            </div>
           )}
       </MenuList>
     </Section>
 
   </div>
   )}
+
 }
 export default Menu;
